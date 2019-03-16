@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "register-service-worker": "^1.6.2",
+    "vant": "^1.6.9",
     "vue": "^2.6.6",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
@@ -23,6 +24,7 @@
     "eslint-plugin-vue": "^5.0.0",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
-    "vue-template-compiler": "^2.5.21"
+    "vue-template-compiler": "^2.5.21",
+    "webpack": "^4.29.6"
   }
 }

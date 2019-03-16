@@ -1,0 +1,268 @@
+.mt15 {
+    margin-top: 15px;
+}
+.ml35 {
+    margin-left: 35px;
+}
+
+.pt20 {
+    padding-top: 20px;
+}
+
+body, p {
+    margin: 0;
+}
+
+.home {
+    position: relative;
+    min-height: 100vh;
+    transition: background 3s;
+    &.caishen1 {
+        background: url('../../assets/images/caishen1.png') no-repeat;
+        background-size: 100%;
+    }
+    &.caishen2 {
+        background: url('../../assets/images/caishen2.png') no-repeat;
+        background-size: 100%;
+    }
+    &.caishen3 {
+        background: url('../../assets/images/caishen3.png') no-repeat;
+        background-size: 100%;
+    }
+    &.caishen4 {
+        background: url('../../assets/images/caishen4.png') no-repeat;
+        background-size: 100%;
+    }
+    &.caishen5 {
+        background: url('../../assets/images/caishen5.png') no-repeat;
+        background-size: 100%;
+    }
+    .left-wrap {
+        position: fixed;
+        top: 20%;
+        left: 0;
+        color: #feeb85;
+        font-size: 15px;
+        .text {
+            width: 25px;
+            line-height: 24px;
+            padding: 3px 0;
+            border-radius: 0 6px 6px 0;
+            background-color: rgba(189, 52, 46, 0.7);
+        }
+        .left-arrow {
+            display: flex;
+            align-items: center;
+            width: 25px;
+            height: 50px;
+            border-radius: 0 6px 6px 0;
+            background-color: rgba(189, 52, 46, 0.7);
+        }
+    }
+    .right-wrap {
+        position: fixed;
+        top: 20%;
+        right: 0;
+        font-size: 15px;
+        .right-btn {
+            width: 25px;
+            height: 36px;
+            line-height: 18px;
+            padding: 7px 0;
+            border-radius: 6px 0 0 6px;
+            background-color: rgba(189, 52, 46, 0.7);
+            color: #feeb85;
+        }
+    }
+    //会员中心
+    .member-center{
+        width: 125px;
+        font-size: 15px;
+        .member-wrap {
+            position: relative;
+            width: 100px;
+            line-height: 45px;
+            border-radius: 0 15px 15px 0;
+            background-color: rgba(189, 52, 46, 0.7);
+            color: #feeb85;
+            .member-module {
+                border-bottom: 1px solid #feeb85;
+                &.none {
+                    border: none;
+                }
+            }
+        }
+        .right-arrow {
+            position: relative;
+            display: flex;
+            align-items: center;
+            left: 100px;
+            bottom: 210px;
+            width: 25px;
+            height: 50px;
+            border-radius: 0 6px 6px 0;
+            background-color: rgba(189, 52, 46, 0.7);
+            color: #feeb85;
+        }
+    }
+    //拜一拜
+    .byb {
+        .byb-wrap {
+            position: relative;
+            margin-top: 20px;
+            .close-btn {
+                position: absolute;                 
+                right: 25px;
+                top: -10px;
+                font-size: 20px;
+                color: rgba(189, 52, 46, 1)
+            }
+            .img {
+                width: 358px;
+            }
+            .btn {
+                height: 40px;
+            }
+        }
+    }
+    //抽签弹出层
+    .chouqian {
+        img {
+            width: 100%;
+        }
+        .btn {
+            width: 140px;
+            margin-top: 20px;
+        }
+    }
+    //抽签结果弹出层
+    .cqResult {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        transform: none;
+        background: url(../../assets/images/chouqian-bg.png) no-repeat;
+        background-size: 100%;
+        .cqResult-wrap {
+            width: 350px;
+            height: 387px;
+            margin: 170px auto 0;
+            background: url(../../assets/images/chouqianditu.png) no-repeat;
+            background-size: 350px 387px;
+            color: #594d03;
+            font-size: 12px;
+            .title {
+                padding-top: 50px;
+                font-size: 15px;
+            }
+            .subTitle {
+                font-size: 12px;
+                transform: scale(0.75);
+                color: rgba(189, 52, 46, 1)
+            }
+            .content {
+                margin: 20px 40px 40px;
+                color: #866f43;
+                font-size: 12px;
+                transform: scale(0.85);
+                p {
+                    text-align: left;
+                } 
+            }
+            .btn {
+                width: 170px;
+                margin: 0 auto;
+                font-size: 12px;
+                color: #fff;
+                background: url(../../assets/images/qianwen-btn.png) no-repeat;
+                background-size: 170px 26px;
+            }
+        }
+    }
+    //贡品/敬香弹出层
+    .scroll-wrap {
+        position: relative;
+        margin-top: 20px;
+        width: 270px;
+        height: 300px;
+        background: url(../../assets/images/chouqianditu.png) no-repeat;
+        background-size: 270px 300px;
+        .close-btn {
+            position: absolute;                 
+            right: -5px;
+            top: -25px;
+            font-size: 25px;
+            color: rgba(189, 52, 46, 1)
+        }
+        .img-group {
+            padding-top: 58px;
+            img {
+                width: 30px;
+                &.xianglu {
+                    width: 50px;
+                }
+            }
+        }
+        .content {
+            margin: 15px 0 25px;
+            font-size: 15px;
+            color: #d9373c;
+            .title {
+                color: #030303;
+            }
+            .text {
+                margin: 0 50px;
+                padding: 5px 0;
+                font-size: 12px;  
+                transform: scale(0.75); 
+                color: #666;
+            }
+        }
+        .pay-btn {
+            width: 170px;
+            margin: 0 auto;
+            font-size: 12px;
+            color: #fff;
+            background: url(../../assets/images/qianwen-btn.png) no-repeat;
+            background-size: 170px 26px;
+        }
+    }
+    .yunshi {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        transform: none;
+        background: url(../../assets/images/yunshi-bg.png) no-repeat;
+        background-size: 100%;
+        .yunshi-wrap {
+            width: 350px;
+            height: 387px;
+            margin: 170px auto 0;
+            background: url(../../assets/images/yunshi-scroll.png) no-repeat;
+            background-size: 350px 387px;
+            font-size: 13px;
+            .title {
+                padding: 30px;
+                color: #282828;
+            }
+            .content {
+                margin: 0 30px;
+                text-align: left;
+                color: #000;
+                .form-field {
+                    label {
+                        letter-spacing: 10px;
+                    }
+                    .name {
+                        width: 185px;
+                        height: 25px;
+                        border: none;
+                        border-radius: 4px;
+                    }
+                }
+            }
+        }
+    }
+}
