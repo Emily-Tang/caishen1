@@ -1,3 +1,5 @@
+import { dateFtt } from '@/utils/common.js'
+
 const fanli = require('@/assets/images/fanli.png'),
       fanli2 = require('@/assets/images/fanli2.png'),
       guanyu = require('@/assets/images/guanyu.png'),
@@ -32,7 +34,9 @@ export default {
             }],
             ysFormData: {
                 username: '',
-                sex: '1'
+                sex: '1',
+                birthday: '',
+                type: '1'
             },
             memberShow: false,   //会员中心是否展示
             bybShow: false,    //拜一拜是否展示
@@ -41,6 +45,8 @@ export default {
             gongpinShow: false,    //贡品弹出层是否显示
             jingxiangShow: false,   //敬香弹出层是否显示
             yunshiShow: false,   //运势弹出框是否显示
+            dateShow: false,   //日期控件弹出框是否显示
+            yunshiResultShow: false,   //运势结果弹出框显示
         }
     },
     methods: {
@@ -76,6 +82,32 @@ export default {
         //运势按钮点击事件
         handleYunshiClick() {
             this.yunshiShow = true
+        },
+        //生日选择框点击事件
+        handleBirthdayClick() {
+            this.dateShow = true
+        },
+        //生日：日期confirm事件
+        handleDateConfirm(val) {
+            this.ysFormData.birthday = dateFtt('yyyy-MM-dd hh:mm:ss', new Date(val))
+            this.dateShow = false
+        },
+        //生日：日期cancel事件
+        handleDateCancel() {
+            this.dateShow = false
+        }, 
+        //运势弹出层：开始占卜按钮点击事件
+        handleZhanbuClick() {
+            this.yunshiShow = false
+            this.yunshiResultShow = true
+        },
+        //会员中心：平台公告点击事件
+        checkNotice() {
+            this.$router.push('/notice')
+        },
+        //会员中心: 分享有礼点击事件
+        checkShare() {
+            this.$router.push('/share')
         }
     },
     watch: {

@@ -1,0 +1,9 @@
+/*底部菜单样式*/
+.caishen .van-tabbar {
+    height: 75px;
+    background-color: rgba(34, 16, 6, .8)
+}
+.caishen .van-tabbar-item__icon img {
+    height: 50px;
+    margin-top: 5px;
+}
