@@ -7,8 +7,7 @@ Vue.use(Router)
 export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes: [
-    {
+  routes: [{
       path: '/',
       name: 'home',
       component: Home
@@ -39,6 +38,13 @@ export default new Router({
       path: '/weChatTest',
       name: '微信号测试',
       component: () => import('@/views/weChatTest/index.vue')
-    }
-  ]
+    }, {
+      path: '/address',
+      name: '常用地址',
+      component: () => import('@/views/address/index.vue')
+    }, {
+      path: '/userInfo',
+      name: '个人信息',
+      component: () => import('@/views/userInfo/index.vue')
+    }]
 })

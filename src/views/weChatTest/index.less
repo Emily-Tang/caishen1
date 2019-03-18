@@ -13,8 +13,64 @@
         height: 395px;
         background: url(../../assets/images/nickName-bg.png) no-repeat;
         background-size: 100% 100%;
+        font-size: 12px;
+        color: #fff;
+        .portrait {
+            width: 82px;
+            height: 82px;
+            margin: 33px auto 15px;
+            border-radius: 50%;
+            overflow: hidden;
+            img {
+                width: 82px;
+            }
+        }
+        .title {
+            font-size: 20px;
+            color: #d9373c;
+        }
+        .cont {
+            padding: 18px 0 75px;
+            font-size: 12px;
+            transform: scale(0.75);
+            color: #666;
+        }
+        .btn {
+            width: 173px;
+            height: 25px;
+            line-height: 25px;
+            margin: 0 auto;
+            background: url(../../assets/images/qianwen-btn.png) no-repeat;
+            background-size: 100% 100%;
+        }
     }
     .result {
-
+        position: absolute;
+        left: 50%;
+        bottom: 100px;
+        transform: translate3d(-50%, 0, 0);
+        width: 354px;
+        height: 395px;
+        background: url(../../assets/images/nickName-bg1.png) no-repeat;
+        background-size: 100% 100%;
+        .title {
+            padding-top: 75px;
+            font-size: 20px;
+            color: #d9373c;
+        }
+        .cont {
+            width: 173px;
+            margin: 15px auto 0;
+            line-height: 20px;
+            font-size: 12px;
+            color: #666;
+            text-align: left;
+            .explain {
+                display: flex;
+                .label {
+                    flex-basis: 60px;
+                }
+            }
+        }
     }
 }
