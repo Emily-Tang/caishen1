@@ -46,5 +46,9 @@ export default new Router({
       path: '/userInfo',
       name: '个人信息',
       component: () => import('@/views/userInfo/index.vue')
+    }, {
+      path: '/chouqianResult',
+      name: '抽签结果',
+      component: () => import('@/views/chouqianResult/index.vue')
     }]
 })

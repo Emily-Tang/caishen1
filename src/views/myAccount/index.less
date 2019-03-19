@@ -1,3 +1,108 @@
 .account {
-    padding-bottom: 100px;
+    width: 100%;
+    min-height: 100vh;
+    background: #fff;
+    text-align: left;
+    .user {
+        display: flex;
+        align-items: center;
+        height: 75px;
+        padding: 0 18px;
+        border-bottom: .5px solid #ccc;
+        color: #666;
+        font-size: 15px;
+        img {
+            width: 48px;
+            border-radius: 50%;
+        }
+    }
+    .yuanbao {
+        position: relative;
+        height: 115px;
+        padding: 0 18px;
+        line-height: 22px;
+        border-bottom: .5px solid #ccc;
+        color: #282828;
+        .title {
+            margin-top: 10px;
+            font-size: 12px;
+        }
+        .total {
+            color: #e40404;
+            font-size: 14px;
+        }
+        .yuanbao-wrap {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 5px;
+            font-size: 12px;
+            .yuanbao-item {
+                text-align: center;
+            }
+            .subTitle {
+                display: flex;
+                align-items: center;
+                color: #666;
+                transform: scale(0.84);
+            }
+        }
+        .proportion {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 12px;
+            transform: scale(.75);
+            color: #e40404;
+        }
+    }
+    .btn-wrap {
+        height: 100px;
+        padding: 0 18px;
+        border-bottom: .5px solid #ccc;
+        button {
+            width: 150px;
+            height: 30px;
+            line-height: 30px;
+            margin-top: 18px;
+            font-size: 15px;
+            color: #fff;
+        }
+        .notice {
+            margin-top: 10px;
+            font-size: 9px;
+            color: #666;
+        }
+    }
+    .list {
+        padding: 10px 18px 0;
+        margin-bottom: 80px;
+        font-size: 10px;
+        color: #666;
+        .list-item {
+            height: 48px;
+            margin-top: 15px;
+            img {
+                width: 15px;
+            }
+            .item-left {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+                top: -22px;
+                left: 25px;
+                padding-bottom: 8px;
+                margin-right: 18px;
+                line-height: 20px;
+                border-bottom: .5px solid #ccc;
+                .num {
+                    font-size: 14px;
+                    color: #282828;
+                    &.red {
+                        color: #d91e06;
+                    }
+                }
+            }
+        }
+    }
 }
