@@ -1,0 +1,83 @@
+.yunshi {
+    width: 100%;
+    height: 100vh;
+    transform: none;
+    background: url(../../assets/images/yunshi-bg.png) no-repeat;
+    background-size: 100% 100%;
+    .yunshi-wrap {
+        position: relative;
+        top: 170px;
+        width: 350px;
+        height: 387px;
+        margin: 0 auto 0;
+        background: url(../../assets/images/yunshi-scroll.png) no-repeat;
+        background-size: 350px 387px;
+        font-size: 13px;
+        .title {
+            padding: 30px;
+            color: #282828;
+        }
+        .content {
+            margin: 0 30px 25px;
+            text-align: left;
+            color: #000;
+            .form-field {
+                display: flex;
+                align-items: center;
+                margin-bottom: 15px;
+                &.column {
+                    align-items: flex-start;
+                    flex-direction: column;
+                }
+                label {
+                    letter-spacing: 10px;
+                    &.label1 {
+                        letter-spacing: 0;
+                    }
+                }
+                .input-field {
+                    width: 175px;
+                    height: 25px;
+                    padding: 0 5px;;
+                    border: none;
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+}
+//运势结果弹出层
+.yunshi-result {
+    position: fixed;
+    top: 170px;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+    color: #5b4c05;
+    text-align: left;
+    .yunshi-wrap {
+        top: 0;
+        p {
+            line-height: 15px;
+            transform: scale(0.83);
+        }
+        .title {
+            padding: 30px 0 20px;
+            text-align: center;
+            font-size: 15px;
+            &.pd {
+                padding: 20px 0 0;
+            }
+        }
+    }
+}
+.scroll-btn {
+    width: 170px;
+    height: 25px;
+    line-height: 25px;
+    margin: 0 auto;
+    font-size: 12px;
+    color: #fff;
+    background: url(../../assets/images/qianwen-btn.png) no-repeat;
+    background-size: 170px 25px;
+    text-align: center;
+}

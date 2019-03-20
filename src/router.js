@@ -50,5 +50,9 @@ export default new Router({
       path: '/chouqianResult',
       name: '抽签结果',
       component: () => import('@/views/chouqianResult/index.vue')
+    }, {
+      path: '/yunshi',
+      name: '运势',
+      component: () => import('@/views/yunshi/index.vue')
     }]
 })

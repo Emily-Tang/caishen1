@@ -7,3 +7,16 @@
     height: 50px;
     margin-top: 5px;
 }
+.caishen .van-tabbar {
+    border-bottom: 2px solid #d4af6d;
+    border-top: 2px solid #d4af6d;
+}
+.caishen .van-tabbar-item:first-child {
+    border-left: 2px solid #d4af6d;
+}
+.caishen .van-tabbar-item:last-child {
+    border-right: 2px solid #d4af6d;
+}
+.caishen .van-hairline--top-bottom::after {
+    border-width: 0;
+}

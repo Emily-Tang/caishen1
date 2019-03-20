@@ -111,5 +111,11 @@
 <style lang="less" scoped>
     @import url('./index.less');
 </style>
+<style>
+    .caishen .van-icon {
+        font-size: 12px;
+    }
+</style>
+
 
 

@@ -1,5 +1,3 @@
-import { dateFtt } from '@/utils/common.js'
-
 const fanli = require('@/assets/images/fanli.png'),
       fanli2 = require('@/assets/images/fanli2.png'),
       guanyu = require('@/assets/images/guanyu.png'),
@@ -32,21 +30,14 @@ export default {
                 normal: liguizu,
                 active: liguizu2
             }],
-            ysFormData: {
-                username: '',
-                sex: '1',
-                birthday: '',
-                type: '1'
-            },
             memberShow: false,   //会员中心是否展示
             bybShow: false,    //拜一拜是否展示
             chouqianShow: false,   //抽签弹出层是否显示
             cqResultShow: false,   //抽签结果弹出层是否显示
             gongpinShow: false,    //贡品弹出层是否显示
             jingxiangShow: false,   //敬香弹出层是否显示
-            yunshiShow: false,   //运势弹出框是否显示
-            dateShow: false,   //日期控件弹出框是否显示
-            yunshiResultShow: false,   //运势结果弹出框显示
+            kaiguangShow: false,   //开光弹框是否显示
+            kgSuccessShow: false,   //开光成功弹框是否显示
         }
     },
     methods: {
@@ -57,6 +48,18 @@ export default {
         //会员中心收起按钮，隐藏会员中心
         handleRightArrowClick() {
             this.memberShow = false
+        },
+        //会员中心：常用地址按钮点击事件
+        checkAddress() {
+            this.$router.push('/address')
+        },
+        //会员中心：我的账户按钮点击事件
+        checkMyAccount() {
+            this.$router.push('/myAccount')
+        },
+        //会员中心：个人信息按钮点击事件
+        checkUserInfo() {
+            this.$router.push('/userInfo')
         },
         //敬香按钮点击事件
         handleJingxiangClick() {
@@ -73,7 +76,7 @@ export default {
         //抽签弹出层: 点击抽签按钮点击事件
         handleChouqian() {
             this.chouqianShow = false
-            this.cqResultShow = true
+            this.$router.push('/chouqianResult')
         },
         //贡品按钮点击事件
         handleGongpinClick() {
@@ -81,25 +84,7 @@ export default {
         },
         //运势按钮点击事件
         handleYunshiClick() {
-            this.yunshiShow = true
-        },
-        //生日选择框点击事件
-        handleBirthdayClick() {
-            this.dateShow = true
-        },
-        //生日：日期confirm事件
-        handleDateConfirm(val) {
-            this.ysFormData.birthday = dateFtt('yyyy-MM-dd hh:mm:ss', new Date(val))
-            this.dateShow = false
-        },
-        //生日：日期cancel事件
-        handleDateCancel() {
-            this.dateShow = false
-        }, 
-        //运势弹出层：开始占卜按钮点击事件
-        handleZhanbuClick() {
-            this.yunshiShow = false
-            this.yunshiResultShow = true
+            this.$router.push('/yunshi')
         },
         //会员中心：平台公告点击事件
         checkNotice() {
@@ -108,6 +93,15 @@ export default {
         //会员中心: 分享有礼点击事件
         checkShare() {
             this.$router.push('/share')
+        },
+        //右侧开光按钮点击事件
+        handleKaiguangClick() {
+            this.kaiguangShow = true
+        },
+        //开光：微信支付按钮点击事件
+        handleWechatPay() {
+            this.kaiguangShow = false
+            this.kgSuccessShow = true
         }
     },
     watch: {

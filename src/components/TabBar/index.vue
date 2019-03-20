@@ -37,4 +37,20 @@
     import TabBar from './index.js'
     export default TabBar
 </script>
+<style>
+    .van-tabbar {
+        border-bottom: 2px solid #d4af6d;
+        border-top: 2px solid #d4af6d;
+    }
+    .van-tabbar-item:first-child {
+        border-left: 2px solid #d4af6d;
+    }
+    .van-tabbar-item:last-child {
+        border-right: 2px solid #d4af6d;
+    }
+    .van-hairline--top-bottom::after {
+        border-width: 0;
+    }
+</style>
+
 
