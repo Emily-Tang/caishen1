@@ -10,7 +10,7 @@ export default new Router({
   routes: [{
       path: '/',
       name: 'home',
-      component: Home
+      component: () => import('@/views/home/index.vue')//component: Home
     },{
       path: '/about',
       name: 'about',

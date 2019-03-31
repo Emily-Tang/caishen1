@@ -1,4 +1,5 @@
 import TabBar from '@/components/TabBar/index.vue'
+import LeftMenu from '@/components/LeftMenu/index.vue'
 import { dateFtt } from '@/utils/common.js'
 
 export default {
@@ -15,7 +16,8 @@ export default {
         }
     },
     components: {
-        TabBar
+        TabBar,
+        LeftMenu
     },
     methods: {
         //日期选择：取消按钮点击事件

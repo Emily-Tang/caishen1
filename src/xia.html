@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>下雨效果</title>
+        <style>
+        body {
+            margin:0;
+        }
+        #yuanbao {
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            z-index: 9999;
+        }
+        #yuanbao>div{
+            position: relative;
+            height: 100%;
+            width:100%;
+            z-index: 1;
+        }
+        #yuanbao img
+        {
+            position:absolute;
+            /* animation:mymove 3s infinite;
+            -webkit-animation:mymove 3s infinite; */
+            height: auto;
+        }
+        @keyframes mymove
+        {
+        from {top:-200px;}
+        to {top:1500px;}
+        }
+
+        @-webkit-keyframes mymove /*Safari and Chrome*/
+        {
+        from {top:-200px;}
+        to {top:1500px;}
+        }
+        </style>
+        <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+    </head>
+<body>
+<div id="yuanbao"></div>
+
+<script>
+(function(){
+	
+	var $yuanbao = $("#yuanbao") ;
+	var lines = [],
+			yb_maxSpeed = 8,
+			yb_spacing = 80,
+			yb_xSpacing = 0,
+			yb_n = $(window).width() / yb_spacing,
+			yb_srcs = ["images/yb_01.png", "images/yb_02.png", "images/yb_03.png","images/yb_01.png", "images/yb_02.png", "images/yb_03.png"],
+			yb_i;
+	
+	for (yb_i = 0; yb_i < yb_n; yb_i++){
+		yb_xSpacing += yb_spacing;
+		lines.push({
+			x: yb_xSpacing,
+            y: -Math.round(Math.random()*600),
+			rotate: Math.round(Math.random()*180),
+			width: 40+ Math.round(Math.random()*40),
+			speed: Math.random()*yb_maxSpeed + 3,
+			src: yb_srcs[Math.floor(Math.random() * yb_srcs.length)]
+		});
+	}
+	
+	function yb_draw(){
+		var i;
+		for (i = 0; i < yb_n; i++){
+            var $img = $("<img src='"+lines[i].src+"'/>");
+            $img.css({
+                'transform':'rotate('+lines[i].rotate+'deg)',
+                'animation':'mymove '+lines[i].speed+'s infinite',
+                'top':lines[i].y+'px',
+                'left':lines[i].x+'px',
+                'width':lines[i].width+'px',
+            });
+            $img.appendTo("#yuanbao");
+        }
+        setTimeout(function(){
+            //$yuanbao.fadeOut(1000);
+            //$yuanbao.html("");
+        },6000);
+	}
+    yb_draw();
+	
+}());
+</script>
+</body>
+</html>

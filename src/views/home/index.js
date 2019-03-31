@@ -1,3 +1,6 @@
+import TabBar from '@/components/TabBar/index.vue'
+import LeftMenu from '@/components/LeftMenu/index.vue'
+
 const fanli = require('@/assets/images/fanli.png'),
       fanli2 = require('@/assets/images/fanli2.png'),
       guanyu = require('@/assets/images/guanyu.png'),
@@ -10,6 +13,10 @@ const fanli = require('@/assets/images/fanli.png'),
       liguizu2 = require('@/assets/images/liguizu2.png')
 
 export default {
+    components: {
+        TabBar,
+        LeftMenu
+    } ,
     data() {
         return {
             bgClass: 'caishen3',

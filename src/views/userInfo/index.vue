@@ -22,7 +22,9 @@
             <p class="tips">提示：本应用来源于中国传统民俗文化，并非现代科学研究成果，仅供娱乐！</p>
         </div>
         <!--底部菜单-->
-        <tab-bar/>
+        <!-- <tab-bar/> -->
+        <!--左侧菜单-->
+        <left-menu/>
         <!--出生年月弹层-->
         <van-popup v-model="dateShow" :overlay="false" position="bottom">
             <van-datetime-picker

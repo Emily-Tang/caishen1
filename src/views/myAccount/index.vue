@@ -101,7 +101,8 @@
             </div>
         </div>
         <!--底部菜单-->
-        <tab-bar/>
+        <!-- <tab-bar/> -->
+        <left-menu/>
     </div>
 </template>
 <script>

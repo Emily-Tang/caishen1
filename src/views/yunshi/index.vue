@@ -77,7 +77,7 @@
             </div>
         </div>
         <!--底部菜单-->
-        <tab-bar/>
+        <!-- <tab-bar/> -->
     </div>
 </template>
 <script>

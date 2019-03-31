@@ -33,7 +33,9 @@
         </div>
         <van-button type="info" class="addBtn">新增地址</van-button>
         <!--底部菜单-->
-        <tab-bar/>
+        <!-- <tab-bar/> -->
+        <!--左侧菜单-->
+        <left-menu/>
     </div>
 </template>
 <script>
